@@ -16,6 +16,12 @@ public class BaseAction  extends AnAction{
      */
   public   String path = "";
 
+
+    @Override
+    public void update(AnActionEvent event) {
+        event.getPresentation().setEnabledAndVisible(true);
+    }
+
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
         CommUtitl.projPath = anActionEvent.getProject().getBasePath()+"/";
